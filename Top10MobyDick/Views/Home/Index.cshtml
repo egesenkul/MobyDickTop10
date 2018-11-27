@@ -1,0 +1,36 @@
+﻿
+@model List<Top10MobyDick.Classes.WordItem>
+    
+
+    @{
+        ViewBag.Title = "Ana Sayfa";
+    }
+
+    <h2>TOP 10 WORDS</h2>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th width="400">
+                        WORD
+                    </th>
+                    <th width="400">
+                        COUNTER
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.counter
+                </td>
+                <td>
+                    @item.word
+                </td>
+            </tr>
+            }
+            </tbody>
+</table>
+    </div>
